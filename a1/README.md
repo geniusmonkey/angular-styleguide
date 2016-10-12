@@ -47,7 +47,6 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
   1. [Angular $ Wrapper Services](#angular--wrapper-services)
   1. [Testing](#testing)
   1. [Animations](#animations)
-  1. [Comments](#comments)
   1. [JSHint](#js-hint)
   1. [JSCS](#jscs)
   1. [Constants](#constants)
@@ -2534,57 +2533,6 @@ Unit testing helps maintain clean code, as such I included some of my recommenda
 
 **[Back to top](#table-of-contents)**
 
-## Comments
-
-### jsDoc
-###### [Style [Y220](#style-y220)]
-
-  - If planning to produce documentation, use [`jsDoc`](http://usejsdoc.org/) syntax to document function names, description, params and returns. Use `@namespace` and `@memberOf` to match your app structure.
-
-    *Why?*: You can generate (and regenerate) documentation from your code, instead of writing it from scratch.
-
-    *Why?*: Provides consistency using a common industry tool.
-
-    ```javascript
-    /**
-     * Logger Factory
-     * @namespace Factories
-     */
-    (function() {
-      angular
-          .module('app')
-          .factory('logger', logger);
-
-      /**
-       * @namespace Logger
-       * @desc Application wide logger
-       * @memberOf Factories
-       */
-      function logger($log) {
-          var service = {
-             logError: logError
-          };
-          return service;
-
-          ////////////
-
-          /**
-           * @name logError
-           * @desc Logs errors
-           * @param {String} msg Message to log
-           * @returns {String}
-           * @memberOf Factories.Logger
-           */
-          function logError(msg) {
-              var loggedMsg = 'Error: ' + msg;
-              $log.error(loggedMsg);
-              return loggedMsg;
-          };
-      }
-    })();
-    ```
-
-**[Back to top](#table-of-contents)**
 
 ## JS Hint
 
