@@ -19,7 +19,7 @@ Beaucoup de mes styles proviennent des nombreuses séances de pair programming a
 Bien que ce guide explique le *quoi*, le *pourquoi* et le *comment*, il m'est utile de pouvoir les visualiser dans la pratique. Ce guide est accompagné par une application d'exemple qui suit ces styles et ces modèles. Vous pouvez trouver l'[application d'exemple (intitulée modular) ici](https://github.com/johnpapa/ng-demos) dans le répertoire `modular`. Vous pouvez librement le récupérer, le cloner, ou le *forker*. [Les instructions pour l’exécuter sont contenues dans ce readme](https://github.com/johnpapa/ng-demos/tree/master/modular).
 
 ## Traductions
-[Les traductions de ce guide stylistique pour Angular](https://github.com/johnpapa/angular-styleguide/tree/master/i18n) sont maintenues par la communauté et peuvent être trouvées ici.
+[Les traductions de ce guide stylistique pour Angular](https://github.com/johnpapa/angular-styleguide/tree/master/a1/i18n) sont maintenues par la communauté et peuvent être trouvées ici.
 
 ## Table des matières
 
@@ -1451,7 +1451,7 @@ Bien que ce guide explique le *quoi*, le *pourquoi* et le *comment*, il m'est ut
           });
   }
 
-  function moviePrepService(movieService) {
+  function moviesPrepService(movieService) {
       return movieService.getMovies();
   }
 
@@ -2017,7 +2017,7 @@ Bien que ce guide explique le *quoi*, le *pourquoi* et le *comment*, il m'est ut
 
     function creditService() { }
 
-    // credit.service.js
+    // customers.service.js
     angular
         .module
         .service('customersService', customersService);
@@ -2050,7 +2050,7 @@ Bien que ce guide explique le *quoi*, le *pourquoi* et le *comment*, il m'est ut
 ### Modules
 ###### [Style [Y127](#style-y127)]
 
-  - Lorqu'il y a de multiples modules, nommez le fichier du module principal ˋapp.module.jsˋ et nommez les autres modules qui en sont dépendants d'après ce qu'ils représentent. Par exemple, nommez un module d'administration ˋadmin.module.jsˋ. Les noms des modules déclarés seraient alors respectivement ˋappˋ et ˋadminˋ.
+  - Lorsqu'il y a de multiples modules, nommez le fichier du module principal ˋapp.module.jsˋ et nommez les autres modules qui en sont dépendants d'après ce qu'ils représentent. Par exemple, nommez un module d'administration ˋadmin.module.jsˋ. Les noms des modules déclarés seraient alors respectivement ˋappˋ et ˋadminˋ.
 
     *Pourquoi ?* : Fournit de la cohérence pour les applications modulaires, et pour prévoir l'extension des applications.
 
@@ -2256,7 +2256,7 @@ Bien que ce guide explique le *quoi*, le *pourquoi* et le *comment*, il m'est ut
 
   - Créez de petits modules qui encapsulent une seule responsabilité.
 
-    *Pourquoi ?* : Les applications modulaires rendent facile la compossibilité rapide puisqu'elles permettent aux équipes de développement de construire verticalement des sections de l'application et de livrer incrémentalement. Cela signifie que nous pouvons brancher de nouvelles fonctionnalités au fur et à mesure de leur développement.
+    *Pourquoi ?* : Les applications modulaires rendent facile la composabilité rapide puisqu'elles permettent aux équipes de développement de construire verticalement des sections de l'application et de livrer incrémentalement. Cela signifie que nous pouvons brancher de nouvelles fonctionnalités au fur et à mesure de leur développement.
 
 ### Création d'un module applicatif
 ###### [Style [Y161](#style-y161)]
